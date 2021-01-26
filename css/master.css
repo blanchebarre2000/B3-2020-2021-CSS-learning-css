@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel&display=swap');
+
 html {
   font-size: 62.5%;
 }
@@ -15,6 +17,7 @@ body {
 }
 
 h1{
+  font-family: "Cinzel", sans-serif;
   font-size: 8rem;
   margin: 8rem 10% 4rem 10%;
 }
@@ -26,7 +29,7 @@ h1{
 .desktop {
   display: none;
   font-size: 2rem;
-  font-family: sans-serif;
+  font-family: Helvetica;
   margin: 0 10% 4rem 10%;
 }
 
@@ -40,6 +43,9 @@ h1{
 @media (min-width: 480px) {
   .smartphone {
     display: none;
+  }
+  h1 {
+    font-weight: 900;
   }
 }
 
@@ -108,9 +114,13 @@ h1{
     margin: 5em;
 }
 
+  h1 {
+    font-weight: 200;
+  }
   h2 {
+    font-family: Verdana;
     margin-left: 1em;
-    font-size: 5em;
+    font-size: 4em;
   }
 
   p {
