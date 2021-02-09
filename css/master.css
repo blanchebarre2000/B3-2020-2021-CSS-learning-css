@@ -20,6 +20,7 @@ h1{
   font-family: "Cinzel", sans-serif;
   font-size: 8rem;
   margin: 8rem 10% 4rem 10%;
+  text-align: center;
 }
 
 .smartphone,
@@ -46,6 +47,7 @@ h1{
   }
   h1 {
     font-weight: 900;
+    text-align: center;
   }
 }
 
@@ -57,6 +59,7 @@ h1{
 
   h1{
     font-size: 5rem;
+    text-align: center;
   }
 
   .tablet-p {
@@ -116,34 +119,99 @@ h1{
 
   h1 {
     font-weight: 200;
+    text-align: center;
   }
   h2 {
     font-family: Verdana;
     margin-left: 1em;
     font-size: 4em;
+    margin-top: 2em;
   }
 
   p {
     font-size: 2em;
   }
 
-  .menu a {
-      display:block;                /* Transformation en block */
-      min-width: 120px;             /* Largeur minimale des liens */
+  .menu {
+    display: flex;                /* Transformation en flexbox */
+    padding:0;                    /* Suppression des marges internes */
+    justify-content: space-around;/* Alignements des liens dans le menu */
+    font-size: 2em;
 
-      margin: 0.5rem;               /* Marges externes (1 valeurs = 4 directions) */
-      padding: 0.4rem 0;            /* Marges internes (2 valeurs = haut/bas et gauche/droite)*/
-      text-align: center;           /* Centrage du texte */
-      background-color: black;    /* Couleur d'arrière-plan */
-      color: #fff;                  /* Couleur du texte */
-      text-decoration: none;        /* Suppression du soulignement */
-      font-size: 2em;
-      border: 1px solid #fff;       /* Ajout d'une bordure */
-      border-radius: 4px;           /* Arrondis des bordures */
-  }
+}
+.menu li {
+    list-style-type: none ;       /* Suppression des puces */
 
-  .menu a:hover {
+}
+.menu a {
+    display:block;                /* Transformation en block */
+    min-width: 120px;             /* Largeur minimale des liens */
+
+    margin: 0.5rem;               /* Marges externes */
+    padding: 0.4rem 0;            /* Marges internes */
+    text-align: center;           /* Centrage du texte */
+    background-color: black;    /* Arrière-plan */
+    color: #fff;                  /* Couleur du texte */
+    text-decoration: none;        /* Suppression du soulignement */
+    border: 1px solid #fff;       /* Ajout d'une bordure */
+    border-radius: 4px;           /* Arrondis des bordures */
+
+    transition: all 1s ;          /* Ajout des effets de transition */
+}
+.menu a.actif {
+    background-color: #000 ;
+    color: black ;
+    border-color: #1ABC9C ;
+}
+.menu a:hover,
+.menu a:hover.actif{
     background-color: #ed2794;
     color: #ffe843;
     border-color: #ffe843;
-  }
+}
+
+.titre {
+    text-align: center;
+}
+
+.conteneur {
+  position : relative;
+  display : inline-block;
+}
+
+.gauche {
+  left : -15%;
+  top: 10px;
+  bottom : 10px;
+  position : absolute;
+  width: 60px;
+  height: 60px;
+}
+
+.droite {
+  right : -15%;
+  top: 10px;
+  bottom : 10px;
+  position : absolute;
+  width: 60px;
+  height: 60px;
+}
+
+.exemple {
+  max-width: var(--grid-flex-max-width);
+  margin: 0 auto;
+  list-style-type: none;
+  display: flex;
+  flex-wrap: wrap;
+justify-content: space-evenly;
+}
+
+.exemple > * {
+  flex-basis: 320px;
+  flex-grow: 1;
+  flex-shrink: 0;
+}
+
+.exemple figure {
+  float: left;
+}
